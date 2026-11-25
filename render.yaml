@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: tk-live-translator-bridge
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    healthCheckPath: /api/health
+    autoDeploy: false
