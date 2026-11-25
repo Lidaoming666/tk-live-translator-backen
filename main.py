@@ -531,8 +531,8 @@ async def disconnect_live():
 
 @app.post("/api/translate/test")
 async def translate_test(body: TranslateTestRequest):
-        translation, source_language, status, error = await translate_to_chinese(
     translation, source_language, status, error = await translate_to_chinese(
+        body.text, body.source_language
     )
     return {
         "original": body.text,
