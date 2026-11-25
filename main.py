@@ -332,7 +332,7 @@ async def live_status():
         "last_comment_at": last_comment_at,
         "comments_buffered": len(events),
         "translation_queue": translation_queue.qsize() if translation_queue else 0,
-    translation, source_language, status, error = await translate_to_chinese(
+            translation, source_language, status, error = await translate_to_chinese(
     }
 
 
